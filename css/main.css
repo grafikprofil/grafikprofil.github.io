@@ -1,0 +1,16 @@
+#wrap {
+	position: relative;
+	width:100vw;
+	height:100vh;
+}
+
+#content-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.font-dagny {
+	font-family: "ff-dagny-web-pro";
+}
