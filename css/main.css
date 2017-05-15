@@ -1,3 +1,7 @@
+body {
+	font-family: "ff-dagny-web-pro";
+}
+
 #wrap {
 	position: relative;
 	width:100vw;
@@ -9,8 +13,5 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-.font-dagny {
-	font-family: "ff-dagny-web-pro";
+	text-align: center;
 }
