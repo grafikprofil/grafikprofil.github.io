@@ -13,7 +13,7 @@ var strings = [
 	'Makroprocess',
 	'Prelle',
 	'Konsensus',
-	'"Jag säger så här"',
+	'"Precis så"',
 	'Managera'
 ];
 
