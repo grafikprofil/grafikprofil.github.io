@@ -1,3 +1,6 @@
+var rows = [];
+var cols = [];
+
 var strings = [
 	'Linjera',
 	'Ax till limpa',
@@ -20,7 +23,18 @@ var strings = [
 $(document).ready(function() {
 
 	$('.bingo-card').on('click', function() {
+		
+		var thisRow = $(this).data('row');
+		var thisCol = $(this).data('col');
+
 		$(this).toggleClass('bingo');
+		
+		rows.push(thisRow);
+		cols.push(thisCol);
+
+		checkBingo(rows);
+		checkBingo(cols);	
+
 	});
 
 	addToRandom(strings);
@@ -33,4 +47,24 @@ function addToRandom(array) {
 		var rand = Math.floor(Math.random() * strings.length)
 		$('.bingo-card:nth-of-type('+(i+1)+') .content').text(strings.splice(rand, 1));
 	}
+}
+
+function checkBingo(array) {
+
+	var counts = {};
+
+	jQuery.each(array, function(key,value) {
+		if (!counts.hasOwnProperty(value)) {
+			counts[value] = 1;
+		} else {
+			counts[value]++;
+			if(counts[value] == 4) {
+				alert('BINGO!');
+			}
+		}
+
+	});
+
+	counts = {};
+
 }
